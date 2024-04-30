@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Button from '@mui/joy/Button';
 import '../styles/Product.css';
+import { successToast, warningToast, errorToast, infoToast } from '../toastHelper';
 
 export default function AddProduct({ mainUserSno }) {
   const [productname, setProductname] = useState('');
@@ -30,113 +31,48 @@ export default function AddProduct({ mainUserSno }) {
     };
 
     if (!productname) {
-      toast.info('Product Name is required', {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      infoToast('Product Name is required');
       return;
     }
     if (!productprice) {
-      toast.info('Product Price is required', {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      infoToast('Product Price is required');
       return;
     }
 
     if (!Number.isInteger(parseInt(productprice))) {
       setProductprice(0.0);
-      toast.warn('enter a valid Product Price', {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      warningToast('enter a valid Product Price');
+      return;
+    }
+
+    if (productprice <= 1) {
+      setProductprice(0.0);
+      warningToast('price must be greater than 1Rs.');
       return;
     }
 
     if (!productdesc) {
-      toast.info('Product Description is required', {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      infoToast('Product Description is required');
       return;
     }
     if (!productimgurl) {
-      toast.info('URL of Product image is required', {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      infoToast('URL of Product image is required');
       return;
     }
     if (!stockavailable) {
-      toast.info('Please mention the available stock of this product', {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      infoToast('Please mention the available stock of this product');
       return;
     }
 
-    if (!Number.isInteger(parseInt(stockavailable))) {
+    if (!Number(stockavailable)) {
+      console.log('here')
       setStockavailable(0);
-      toast.warn('enter a valid number of stock available', {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      warningToast('enter a valid number of stock available');
       return;
     }
 
     if (!category) {
-      toast.info('Product Category is required', {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      infoToast('Product Category is required');
       return;
     }
     axios.post('http://localhost:8080/products/save', productData)
@@ -144,16 +80,7 @@ export default function AddProduct({ mainUserSno }) {
         console.log(response.status);
         console.log(productData);
         setTimeout(() => {
-          toast.success('Product Added', {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-          });
+          successToast('Product Added');
         }, 300);
       })
       .catch(error => {

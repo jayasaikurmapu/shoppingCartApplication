@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 export const successToast = (message) => {
     toast.success(message, {
       position: "top-right",
-      autoClose: 2000,
+      autoClose: 1000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: false,
@@ -18,7 +18,7 @@ export const successToast = (message) => {
   export const warningToast = (message) => {
     toast.warn(message, {
       position: "top-right",
-      autoClose: 4000,
+      autoClose: 1000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: false,
@@ -31,7 +31,7 @@ export const successToast = (message) => {
   export const errorToast = (message) => {
     toast.error(message, {
       position: "top-right",
-      autoClose: 2000,
+      autoClose: 1000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: false,
@@ -44,7 +44,7 @@ export const successToast = (message) => {
   export const infoToast = (message) => {
     toast.info(message, {
       position: "top-right",
-      autoClose: 2000,
+      autoClose: 1000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: false,
