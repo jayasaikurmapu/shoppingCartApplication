@@ -1,0 +1,38 @@
+.cardContentContainer {
+    display: flex;
+    align-items: center;
+    padding-left: 200px;
+    padding-top: 30px;
+}
+
+.cardContentproductImg {
+    margin-right: 20px;
+}
+
+.cardContentproductName {
+    padding-right: 100px;
+    font-family: 'robotoMedium';
+}
+
+.cardContentFont {
+    font-family: 'robotoRegular';
+}
+
+.cardContentRating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.rateStyle {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.rateHeading {
+    padding-left: 19px;
+    font-family: 'robotoRegular';
+}

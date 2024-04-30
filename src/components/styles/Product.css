@@ -1,0 +1,26 @@
+.addProductContainer {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.h3Style{
+    font-size: 40px;
+}
+
+.boxStyle {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.textField {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.pageHeading {
+    padding-top: 15px;
+    font-family: 'robotoMedium';
+}

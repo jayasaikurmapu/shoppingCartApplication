@@ -1,0 +1,46 @@
+.background {
+    display: flex;
+    flex-direction: column;
+    background-image: url("https://img.freepik.com/free-photo/shopping-bag-cart_23-2148879372.jpg?w=1060&t=st=1714028737~exp=1714029337~hmac=fdc4a80e215b5af6d2c8a5043aebb7b4cee7f0763343a917c8433f7581ea947c");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vh;
+    height: 100vh;
+}
+
+.newCollectionHeading{
+    margin-left: 40px;
+    margin-top: 50px;
+    font-family: 'robotoRegular';
+}
+
+.capstoneStoreHeading {
+    margin-left: 40px;
+    font-family: 'robotoMedium';
+}
+
+.content {
+    margin-left: 40px;
+    width: 40%;
+    font-family: 'robotoItalic';
+    font-size: 20px;
+}
+
+.buttonStyle {
+    width: auto;
+}
+
+.carouselBackground {
+    padding-top: 50px;
+    background-image: url("https://img.freepik.com/free-photo/orange-copy-space-background-with-sale-idea_23-2148305925.jpg?w=1060&t=st=1714029611~exp=1714030211~hmac=48d0dabe30d0b5c38d5f2d2f507473ab33f643768c6d96a29fac61943ae8b970");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.ourCollectionHeading {
+    text-align: center;
+    justify-content: center;
+    font-family: 'robotoMedium';
+}

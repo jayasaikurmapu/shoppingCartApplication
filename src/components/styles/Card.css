@@ -1,0 +1,12 @@
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.searchByCategoryContainer {
+  padding-bottom: 10px;
+  padding-top: 15px;
+}
+  
+  

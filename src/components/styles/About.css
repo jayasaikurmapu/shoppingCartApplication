@@ -1,0 +1,35 @@
+.aboutContainer {
+    text-align: center;
+    padding: 0 20%;
+}
+
+.aboutTitle {
+    margin-top: 60px;
+    font-family: 'robotoMedium';
+}
+
+.aboutText {
+    font-family: 'robotoItalic';
+    font-size: 20px;
+}
+
+.aboutButton {
+    margin-top: 20px;
+    width: auto;
+    font-family: 'robotoRegular';
+}
+
+/* @font-face {
+    font-family: robotoregular;
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: robotoitalic;
+    src: url('../fonts/Roboto-Italic.ttf');
+}
+
+@font-face {
+    font-family: robotomedium;
+    src: url('../fonts/Roboto-Medium.ttf');
+} */
