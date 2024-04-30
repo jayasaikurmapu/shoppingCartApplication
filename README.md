@@ -43,15 +43,22 @@ npm start
 
 To start using the Shopping Cart Application, follow these steps:
 
-Sign Up as a Vendor: Begin by signing up as a vendor, and wait for admin to approve your registration.
-Log In as Admin: Use the following credentials to log in as an admin:
+1) Sign Up as a Vendor: Begin by signing up as a vendor, and wait for admin to approve your registration.
+
+2) Log In as Admin: Use the following credentials to log in as an admin:
 Username: admin
 Password: admin
-Configure Vendors: Once logged in as an admin, navigate to the 'configure vendors' screen to accept the  vendor registration.
-Log In as Vendor: After being accepted as a vendor, log in again using your vendor credentials.
-Add Products: As a vendor, you can now add products to the store. The shop will initially be empty, but you can populate it with your products.
-Sign Up and Log In as Customer: To view, filter, search, and purchase products, sign up and log in as a customer.
-Browse and Shop: Once logged in as a customer, you can browse through the available products, filter them based on your preferences, search for specific items, and proceed to purchase them.
+
+3) Configure Vendors: Once logged in as an admin, navigate to the 'configure vendors' screen to accept the  vendor registration.
+
+4) Log In as Vendor: After being accepted as a vendor, log in again using your vendor credentials.
+
+5) Add Products: As a vendor, you can now add products to the store. The shop will initially be empty, but you can populate it with your products.
+
+6) Sign Up and Log In as Customer: To view, filter, search, and purchase products, sign up and log in as a customer.
+
+7) Browse and Shop: Once logged in as a customer, you can browse through the available products, filter them based on your preferences, search for specific items, and proceed to purchase them.
+
 By following these steps, you can effectively use the Shopping Cart Application for your needs.
 
 
