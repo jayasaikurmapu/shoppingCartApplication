@@ -14,6 +14,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import '../styles/CardContent.css';
+import { successToast, warningToast, errorToast, infoToast } from '../toastHelper';
 
 const CardContent = ({ mainUsername, adminRender, vendorRender }) => {
   const { index } = useParams();
@@ -99,16 +100,7 @@ const CardContent = ({ mainUsername, adminRender, vendorRender }) => {
           console.error('Error:', error);
         });
     }
-    toast.success('Product Added to Cart', {
-      position: "top-right",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-    });
+    successToast('Product Added to Cart');
   }
 
   const submitRating = (rating) => {
@@ -124,16 +116,7 @@ const CardContent = ({ mainUsername, adminRender, vendorRender }) => {
     })
       .then(response => {
         console.log(response.status);
-        toast.success('Review Submitted Successfully', {
-          position: "top-right",
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: false,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
+        successToast('Review Submitted Successfully');
         setSubmittedRating(rating);
       })
       .catch(error => {

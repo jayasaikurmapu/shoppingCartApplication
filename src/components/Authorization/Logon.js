@@ -62,7 +62,7 @@ const Logon = ({ setAdminRender, setVendorRender, setCustomerRender, setMainUser
           const user = responseData.find((user) => user.username === enteredUsername);
 
           if (enteredUsername === 'admin') {
-            successToast('Admin Login successful');
+            // successToast('Admin Login successful');
             setAdminRender(true);
             setVendorRender(false);
             setCustomerRender(false);
@@ -72,7 +72,7 @@ const Logon = ({ setAdminRender, setVendorRender, setCustomerRender, setMainUser
               if (response.data === true) {
                 if (user.vendor) {
                   if (user.status === 'Accepted') {
-                    successToast('Vendor Login successful');
+                    // successToast('Vendor Login successful');
                     setAdminRender(false);
                     setVendorRender(true);
                     setCustomerRender(false);
@@ -88,7 +88,7 @@ const Logon = ({ setAdminRender, setVendorRender, setCustomerRender, setMainUser
                   }
                 }
                 else {
-                  successToast('User Login successful');
+                  // successToast('User Login successful');
                   setAdminRender(false);
                   setVendorRender(false);
                   setCustomerRender(true);

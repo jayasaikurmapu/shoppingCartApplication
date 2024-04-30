@@ -14,6 +14,7 @@ import CardOverflow from '@mui/joy/CardOverflow';
 import Chip from '@mui/joy/Chip';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import StarIcon from '@mui/icons-material/Star';
+import { successToast } from '../toastHelper';
 
 const CardUI = ({ productimgurl, product, numOfCart, setNumOfCart, productname, productprice, stockavailable, id, category, rating, adminRender, vendorRender }) => {
 
@@ -27,16 +28,7 @@ const CardUI = ({ productimgurl, product, numOfCart, setNumOfCart, productname, 
         .then(response => {
           console.log(response.data);
           console.log('Response status code:', response.status);
-          toast.success('Product Added to Cart', {
-            position: "top-right",
-            autoClose: 1000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-          });
+          successToast('Product Added to Cart');
         })
         .catch(error => {
           console.error('Error:', error);

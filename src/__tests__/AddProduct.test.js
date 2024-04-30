@@ -2,7 +2,7 @@ import React from 'react';
 import { render, fireEvent, waitFor, screen } from '@testing-library/react';
 import AddProduct from '../components/ProductConfig/AddProduct';
 
-describe.skip('AddProduct Component', () => {
+describe('AddProduct Component', () => {
   test('renders Add Product form', () => {
     render(<AddProduct />);
     expect(screen.getByLabelText(/Product Name/i)).toBeInTheDocument();
@@ -85,54 +85,4 @@ describe.skip('AddProduct Component', () => {
     // expect(valueCheck).toBeInTheDocument(); // check later
   })
 
-  // test('displays toast message for empty fields when submitting form', async () => {
-  //   render(<AddProduct mainUserSno={123} />);
-    
-  //   fireEvent.click(screen.getByText(/Add Product/i));
-
-  //   await waitFor(() => {
-  //     expect(screen.getByText(/Product Name is required/i)).toBeInTheDocument();
-  //     expect(screen.getByText(/Product Price is required/i)).toBeInTheDocument();
-  //     expect(screen.getByText(/Product Description is required/i)).toBeInTheDocument();
-  //     expect(screen.getByText(/URL of Product image is required/i)).toBeInTheDocument();
-  //     expect(screen.getByText(/Please mention the available stock of this product/i)).toBeInTheDocument();
-  //     expect(screen.getByText(/Product Category is required/i)).toBeInTheDocument();
-  //   });
-  // });
-
-  // test('displays toast message for invalid data when submitting form', async () => {
-  //   render(<AddProduct mainUserSno={123} />);
-    
-  //   fireEvent.change(screen.getByLabelText(/Product Price/i), { target: { value: 'invalid' } });
-  //   fireEvent.change(screen.getByLabelText(/Stock Available/i), { target: { value: 'invalid' } });
-
-  //   fireEvent.click(screen.getByText(/Add Product/i));
-
-  //   await waitFor(() => {
-  //     expect(screen.getByText(/enter a valid Product Price/i)).toBeInTheDocument();
-  //     expect(screen.getByText(/enter a valid number of stock available/i)).toBeInTheDocument();
-  //   });
-  // });
-
-  // test('displays toast message for API request error', async () => {
-  //   axios.post.mockRejectedValueOnce(new Error('Failed to add product'));
-
-  //   render(<AddProduct mainUserSno={123} />);
-    
-  //   fireEvent.change(screen.getByLabelText(/Product Name/i), { target: { value: 'Test Product' } });
-  //   fireEvent.change(screen.getByLabelText(/Product Price/i), { target: { value: '10.99' } });
-  //   fireEvent.change(screen.getByLabelText(/Product Description/i), { target: { value: 'This is a test product.' } });
-  //   fireEvent.change(screen.getByLabelText(/Product image Url/i), { target: { value: 'https://example.com/image.jpg' } });
-  //   fireEvent.change(screen.getByLabelText(/Stock Available/i), { target: { value: '100' } });
-  //   fireEvent.change(screen.getByLabelText(/Category/i), { target: { value: 'Test Category' } });
-
-  //   fireEvent.click(screen.getByText(/Add Product/i));
-
-  //   await waitFor(() => {
-  //     expect(screen.getByText(/Error: Failed to add product/i)).toBeInTheDocument();
-  //   });
-  // });
-
-
-  // You can write more test cases for other scenarios, like successful form submission, etc.
 });

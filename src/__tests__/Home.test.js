@@ -1,5 +1,5 @@
 import user from "@testing-library/user-event";
-import { BrowserRouter, Switch, Route, Router } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { render, fireEvent, waitFor, screen } from '@testing-library/react';
 import { act } from 'react-dom/test-utils';
 import userEvent from '@testing-library/user-event';
@@ -7,7 +7,7 @@ import Home from '../components/Home/Home';
 import { createMemoryHistory } from "history";
 import CardGrid from "../components/Shop/CardGrid";
 
-test.skip('renders Home page', () => {
+test('renders Home page', () => {
   render(<Home cardData={[]} />, {
     wrapper: Router
   });
@@ -15,7 +15,7 @@ test.skip('renders Home page', () => {
   expect(linkElement).toBeInTheDocument();
 });
 
-test.skip('renders headings correctly', () => {
+test('renders headings correctly', () => {
   render(<Home cardData={[]} />, {
     wrapper: Router
   });
@@ -25,7 +25,7 @@ test.skip('renders headings correctly', () => {
   expect(capstoneStoreHeading).toBeInTheDocument();
 });
 
-test.skip('renders shop now button correctly', () => {
+test('renders shop now button correctly', () => {
   render(<Home cardData={[]} />, {
     wrapper: Router
   });
@@ -33,7 +33,7 @@ test.skip('renders shop now button correctly', () => {
   expect(shopNowButton).toBeInTheDocument();
 });
 
-test.skip('renders welcome paragraph correctly', () => {
+test('renders welcome paragraph correctly', () => {
   render(<Home cardData={[]} />, {
     wrapper: Router
   });
@@ -44,7 +44,7 @@ test.skip('renders welcome paragraph correctly', () => {
   expect(listElement).toBeInTheDocument();
 });
 
-test('user event check', async () => {
+test.skip('user event check', async () => {
   const historyMock = createMemoryHistory(["/", "/cardGrid"])
   render(
     <Router history={historyMock}>

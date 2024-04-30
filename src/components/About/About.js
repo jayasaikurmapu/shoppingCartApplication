@@ -5,9 +5,9 @@ import '../styles/About.css';
 
 export default function About() {
   return (
-    <div class="aboutContainer">
-      <h1 class="aboutTitle">About Us</h1>
-      <p class="aboutText">
+    <div className="aboutContainer">
+      <h1 className="aboutTitle">About Us</h1>
+      <p className="aboutText">
         At Capstone Store, we're more than just an online shopping destination – we're
         your go-to marketplace for all your needs. With a diverse range of products
         including home appliances, fashion, food and beverages, electronics, toys, and

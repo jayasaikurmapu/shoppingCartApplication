@@ -46,18 +46,6 @@ function App() {
     deleteRejectedRecords();
   }, []);
 
-  useEffect(() => {
-    if (adminRender){
-      toast.success("admin login successful");
-    }
-    else if (vendorRender){
-      toast.success("vendor login successful");
-    }
-    else if (customerRender){
-      toast.success("customer login successful");
-    }
-  }, [adminRender, vendorRender, customerRender]);
-
   const fetchData = async () => {
     try {
       const response = await axios.get('http://localhost:8080/products/all');

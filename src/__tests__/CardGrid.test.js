@@ -4,9 +4,11 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { render, fireEvent, waitFor, screen } from '@testing-library/react';
 import CardGrid from '../components/Shop/CardGrid';
 
-describe('Card Grid Component', () => {
-    test.skip('renders Card Grid Component', () => {
-      render(<CardGrid mainUsername={'reddymasu'} adminRender={false} vendorRender={true}/>);
+describe.skip('Card Grid Component', () => {
+    test('renders Card Grid Component', () => {
+      render(<CardGrid mainUsername={'reddymasu'} adminRender={false} vendorRender={true}/>,{
+        wrapper: Router
+      });
       expect(screen.getByRole('button',{
         name: 'Search By Categories'
       })).toBeInTheDocument();

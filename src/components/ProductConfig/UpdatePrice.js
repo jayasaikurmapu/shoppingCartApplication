@@ -5,6 +5,7 @@ import Table from '@mui/joy/Table';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../styles/Product.css';
+import { successToast } from '../toastHelper';
 
 const UpdatePrice = ({ mainUserSno }) => {
   const [products, setProducts] = useState([]);
@@ -59,16 +60,7 @@ const UpdatePrice = ({ mainUserSno }) => {
       .then(response => {
         console.log('Response:', response.data);
         console.log(response.status);
-        toast.success('Updated Successfully', {
-          position: "top-right",
-          autoClose: 1500,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: false,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
+        successToast('Updated Successfully');
         getData();
       })
       .catch(error => {

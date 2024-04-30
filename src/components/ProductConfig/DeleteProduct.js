@@ -6,6 +6,7 @@ import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../styles/Product.css'
+import { successToast } from '../toastHelper';
 
 const DeleteProduct = ({ mainUserSno }) => {
   const [products, setProducts] = useState([]);
@@ -58,16 +59,7 @@ const DeleteProduct = ({ mainUserSno }) => {
     axios.delete(`http://localhost:8080/products/delete/${productsid}`).then((response) => {
       console.log(response.data);
       console.log(response.status);
-      toast.success(`Product deleted Successfully`, {
-        position: "top-right",
-        autoClose: 1500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      successToast(`Product deleted Successfully`);
       getData(); // Refresh the vendor list after deletion
     })
       .catch((error) => {
